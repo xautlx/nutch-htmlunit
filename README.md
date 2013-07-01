@@ -1,10 +1,29 @@
 nutch-htmlunit
 ==============
 
-Nutch protocol plugin for AJAX page fetch based on Htmlunit.
+### Introduction
 
-Development and tested with Apache Nutch 2.1
+According to the implementation of Apache Nutch 2.1, we can't get dynamic HTML information from fetch pages including AJAX requests as it will ignore all AJAX requests.
+
+This plugin will use [Htmlunit](http://htmlunit.sourceforge.net/) to fetch whole page content with necessary dynamic AJAX requests. 
+It developed and tested with Apache Nutch 2.1, you can try it on other nutch version.
 
 ### Quick Start
 
-* Using ivy or maven or manually to copy 
+* Using ivy or maven or manually to copy htmlunit dependencies to your apache-nutch-2.1/lib, please refer: http://htmlunit.sourceforge.net/dependencies.html
+* Copy runtime/local/plugins/* to your apache-nutch-2.1/plugins
+* Change your apache-nutch-2.1/conf/nutch-site.xml to use this plugin 'protocol-htmlunit', as below sample:
+```
+<property>
+  <name>plugin.includes</name>
+  <value>protocol-htmlunit|urlfilter-regex|parse-(html|tika)|index-(basic|anchor)|indexer-solr|scoring-opic|urlnormalizer-(pass|regex|basic)</value>
+  <description>Regular expression naming plugin directory names to
+  include.  Any plugin not matching this expression is excluded.
+  In any case you need at least include the nutch-extensionpoints plugin. By
+  default Nutch includes crawling just HTML and plain text via HTTP,
+  and basic indexing and search plugins. In order to use HTTPS please enable 
+  protocol-httpclient, but be aware of possible intermittent problems with the 
+  underlying commons-httpclient library.
+  </description>
+</property>
+```
