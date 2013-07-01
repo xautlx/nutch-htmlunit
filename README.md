@@ -33,7 +33,7 @@ It developed and tested with Apache Nutch 2.1, you can try it on other Nutch ver
 
 ```
 
-* Optionally, you can config apache-nutch-2.1/conf/regex-urlfilter.txt to control htmlunit only fetch specified urls. 
+* Optionally, you can config apache-nutch-2.1/conf/regex-urlfilter.txt to control htmlunit only fetch specified urls including internal AJAX request. 
 See detail: https://github.com/xautlx/nutch-htmlunit/blob/master/src/plugin/lib-htmlunit/src/java/org/apache/nutch/protocol/htmlunit/RegexHttpWebConnection.java
 
 * That's all. Now you can execute: apache-nutch-2.1/bin/nutch crawl urls, and see page contents parsed by htmlunit.
