@@ -18,7 +18,7 @@ It developed and tested with Apache Nutch 2.1, you can try it on other nutch ver
 
 <property>
   <name>plugin.includes</name>
-  <value>protocol-htmlunit|urlfilter-regex|parse-(html|tika)|index-(basic|anchor)|indexer-solr|scoring-opic|urlnormalizer-(pass|regex|basic)</value>
+  <value>protocol-htmlunit|urlfilter-regex|parse-...</value>
   <description>Regular expression naming plugin directory names to
   include.  Any plugin not matching this expression is excluded.
   In any case you need at least include the nutch-extensionpoints plugin. By
