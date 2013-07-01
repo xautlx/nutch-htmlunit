@@ -15,6 +15,7 @@ It developed and tested with Apache Nutch 2.1, you can try it on other nutch ver
 * Change your apache-nutch-2.1/conf/nutch-site.xml to use this plugin 'protocol-htmlunit', as below sample:
 
 ```
+
 <property>
   <name>plugin.includes</name>
   <value>protocol-htmlunit|urlfilter-regex|parse-(html|tika)|index-(basic|anchor)|indexer-solr|scoring-opic|urlnormalizer-(pass|regex|basic)</value>
@@ -27,4 +28,5 @@ It developed and tested with Apache Nutch 2.1, you can try it on other nutch ver
   underlying commons-httpclient library.
   </description>
 </property>
+
 ```
