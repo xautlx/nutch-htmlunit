@@ -13,6 +13,7 @@ It developed and tested with Apache Nutch 2.1, you can try it on other Nutch ver
 * Using ivy or maven or manually to copy htmlunit dependencies to your apache-nutch-2.1/lib, please refer: http://htmlunit.sourceforge.net/dependencies.html
 * Copy runtime/local/plugins/* to your apache-nutch-2.1/plugins
 * Change your apache-nutch-2.1/conf/nutch-site.xml to use this plugin 'protocol-htmlunit', as below sample:
+
 ```
 
 <property>
@@ -29,4 +30,5 @@ It developed and tested with Apache Nutch 2.1, you can try it on other Nutch ver
 </property>
 
 ```
+
 * That's all. Now you can execute: apache-nutch-2.1/bin/nutch crawl urls, and see page contents parsed by htmlunit.
