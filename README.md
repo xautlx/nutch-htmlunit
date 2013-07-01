@@ -3,10 +3,10 @@ nutch-htmlunit
 
 ### Introduction
 
-According to the implementation of Apache Nutch 2.1, we can't get dynamic HTML information from fetch pages including AJAX requests as it will ignore all AJAX requests.
+According to the implementation of [Apache Nutch](http://nutch.apache.org/) 2.1, we can't get dynamic HTML information from fetch pages including AJAX requests as it will ignore all AJAX requests.
 
 This plugin will use [Htmlunit](http://htmlunit.sourceforge.net/) to fetch whole page content with necessary dynamic AJAX requests. 
-It developed and tested with Apache Nutch 2.1, you can try it on other nutch version.
+It developed and tested with Apache Nutch 2.1, you can try it on other Nutch version or refactor the source codes as your design.
 
 ### Quick Start
 
