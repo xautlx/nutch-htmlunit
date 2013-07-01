@@ -27,9 +27,6 @@
    <runtime>
      <library name="lib-htmlunit.jar">
         <export name="*"/>
-     </library> 
-     <library name="htmlunit.jar">
-        <export name="*"/>
      </library>       
    </runtime>
 
