@@ -1,4 +1,4 @@
-nutch-htmlunit
+Nutch Htmlunit Plugin
 ==============
 
 ### Introduction
