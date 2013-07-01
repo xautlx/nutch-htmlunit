@@ -11,7 +11,9 @@ It developed and tested with Apache Nutch 2.1, you can try it on other Nutch ver
 ### Quick Start
 
 * Using ivy or maven or manually to copy htmlunit dependencies to your apache-nutch-2.1/lib, please refer: http://htmlunit.sourceforge.net/dependencies.html
+
 * Copy runtime/local/plugins/* to your apache-nutch-2.1/plugins
+
 * Change your apache-nutch-2.1/conf/nutch-site.xml to use this plugin 'protocol-htmlunit', as below sample:
 
 ```
@@ -30,5 +32,8 @@ It developed and tested with Apache Nutch 2.1, you can try it on other Nutch ver
 </property>
 
 ```
+
+* Optionally, you can config regex-urlfilter.txt to control htmlunit only fetch specified urls. 
+See detail: https://github.com/xautlx/nutch-htmlunit/blob/master/src/plugin/lib-htmlunit/src/java/org/apache/nutch/protocol/htmlunit/RegexHttpWebConnection.java
 
 * That's all. Now you can execute: apache-nutch-2.1/bin/nutch crawl urls, and see page contents parsed by htmlunit.
