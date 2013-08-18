@@ -37,3 +37,7 @@ It developed and tested with Apache Nutch 2.1, you can try it on other Nutch ver
 See detail: https://github.com/xautlx/nutch-htmlunit/blob/master/src/plugin/lib-htmlunit/src/java/org/apache/nutch/protocol/htmlunit/RegexHttpWebConnection.java
 
 * That's all. Now you can execute: apache-nutch-2.1/bin/nutch crawl urls, and see page contents parsed by htmlunit.
+
+### Contact Author
+
+* E-Mail: xautlx@hotmail.com
