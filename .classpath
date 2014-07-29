@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="lib" path="conf"/>
+	<classpathentry kind="src" path="src/plugin/parse-html/src/test"/>
+	<classpathentry kind="src" path="src/plugin/index-s2jh/src/test"/>
+	<classpathentry kind="src" path="src/plugin/index-s2jh/src/java"/>
+	<classpathentry kind="src" path="src/plugin/protocol-selenium/src/java"/>
+	<classpathentry kind="src" path="src/plugin/protocol-htmlunit/src/java"/>
+	<classpathentry kind="src" path="src/plugin/lib-htmlunit/src/java"/>
+	<classpathentry kind="src" path="src/plugin/indexer-solr/src/java"/>
+	<classpathentry kind="src" path="src/plugin/parse-s2jh/src/test"/>
+	<classpathentry kind="src" path="src/plugin/parse-s2jh/src/java"/>
+	<classpathentry kind="src" path="src/plugin/index-basic/src/test"/>
+	<classpathentry including="**/*.java" kind="src" path="src/testresources"/>
+	<classpathentry kind="src" path="src/plugin/urlnormalizer-basic/src/java"/>
+	<classpathentry kind="src" path="src/plugin/urlfilter-prefix/src/java"/>
+	<classpathentry kind="src" path="src/plugin/urlnormalizer-pass/src/test"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/test">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src/plugin/protocol-httpclient/src/test"/>
+	<classpathentry kind="src" path="src/plugin/urlnormalizer-basic/src/test"/>
+	<classpathentry kind="src" output="target/classes" path="src/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src/plugin/urlfilter-automaton/src/test"/>
+	<classpathentry kind="src" path="src/plugin/urlfilter-suffix/src/java"/>
+	<classpathentry kind="src" path="src/plugin/subcollection/src/test"/>
+	<classpathentry kind="src" path="src/plugin/language-identifier/src/test"/>
+	<classpathentry kind="src" path="src/plugin/creativecommons/src/test"/>
+	<classpathentry kind="src" path="src/plugin/protocol-ftp/src/java"/>
+	<classpathentry kind="src" path="src/plugin/index-basic/src/java"/>
+	<classpathentry kind="src" path="src/plugin/index-more/src/test"/>
+	<classpathentry kind="src" path="src/bin"/>
+	<classpathentry kind="src" path="src/plugin/index-more/src/java"/>
+	<classpathentry kind="src" path="src/plugin/urlfilter-domain/src/test"/>
+	<classpathentry kind="src" path="src/plugin/subcollection/src/java"/>
+	<classpathentry kind="src" path="src/plugin/urlnormalizer-pass/src/java"/>
+	<classpathentry kind="src" path="src/plugin/index-anchor/src/test"/>
+	<classpathentry kind="src" path="src/plugin/protocol-file/src/test"/>
+	<classpathentry kind="src" path="src/plugin/urlfilter-validator/src/java"/>
+	<classpathentry kind="src" path="src/plugin/index-anchor/src/java"/>
+	<classpathentry kind="src" path="src/plugin/parse-tika/src/test"/>
+	<classpathentry kind="src" path="src/plugin/microformats-reltag/src/java"/>
+	<classpathentry kind="src" path="src/plugin/protocol-http/src/java"/>
+	<classpathentry kind="src" path="src/plugin/urlnormalizer-regex/src/test"/>
+	<classpathentry kind="src" path="src/plugin/lib-http/src/test"/>
+	<classpathentry kind="src" path="src/plugin/protocol-httpclient/src/java"/>
+	<classpathentry kind="src" path="src/plugin/language-identifier/src/java"/>
+	<classpathentry kind="src" path="src/plugin/parse-html/src/java"/>
+	<classpathentry kind="src" path="src/plugin/urlfilter-automaton/src/java"/>
+	<classpathentry kind="src" path="src/plugin/urlfilter-suffix/src/test"/>
+	<classpathentry kind="src" path="src/plugin/urlfilter-regex/src/test"/>
+	<classpathentry kind="src" path="src/plugin/scoring-opic/src/java"/>
+	<classpathentry kind="src" path="src/plugin/parse-tika/src/java"/>
+	<classpathentry kind="src" path="src/plugin/scoring-link/src/java"/>
+	<classpathentry kind="src" path="src/plugin/urlfilter-regex/src/java"/>
+	<classpathentry kind="src" path="src/plugin/urlnormalizer-regex/src/java"/>
+	<classpathentry kind="src" path="src/plugin/lib-regex-filter/src/test"/>
+	<classpathentry kind="src" path="src/plugin/lib-regex-filter/src/java"/>
+	<classpathentry kind="src" path="src/plugin/urlfilter-domain/src/java"/>
+	<classpathentry kind="src" path="src/plugin/tld/src/java"/>
+	<classpathentry kind="src" path="src/plugin/parse-js/src/java"/>
+	<classpathentry kind="src" path="src/plugin/protocol-file/src/java"/>
+	<classpathentry kind="src" path="src/plugin/lib-http/src/java"/>
+	<classpathentry kind="src" path="src/plugin/creativecommons/src/java"/>
+	<classpathentry kind="con" path="org.apache.ivyde.eclipse.cpcontainer.IVYDE_CONTAINER/?project=apache-nutch-2.1&amp;ivyXmlPath=ivy%2Fivy.xml&amp;confs=*"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/automaton-1.11-8.jar"/>
+	<classpathentry kind="lib" path="lib/com-sun-syndication-feed-1.0-201002241208.jar"/>
+	<classpathentry kind="lib" path="lib/log4jdbc-remix-0.2.7.jar"/>
+	<classpathentry kind="lib" path="lib/log4jdbc4-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/nekohtml-1.9.18.jar"/>
+	<classpathentry kind="lib" path="lib/sqljdbc-4.0.2206.100.jar"/>
+	<classpathentry kind="lib" path="lib/tagsoup-1.2.1.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
