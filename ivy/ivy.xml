@@ -76,6 +76,11 @@
 		<dependency org="com.google.guava" name="guava" rev="11.0.2" />
 		<dependency org="com.google.code.crawler-commons" name="crawler-commons"
 			rev="0.3" />
+			
+	  <dependency org="net.sourceforge.htmlunit" name="htmlunit"
+            rev="2.12" conf="*->default" />
+       <dependency org="org.apache.solr" name="solr-solrj" rev="3.4.0"
+            conf="*->default"/>
 
 		<!--Configuration: test -->
 
@@ -88,7 +93,7 @@
 			conf="test->default" />
 		<dependency org="org.mortbay.jetty" name="jetty-util" rev="6.1.22"
 			conf="test->default" />
-
+        
 		<!--global exclusion -->
 		<exclude module="jmxtools" />
 		<exclude module="jms" />

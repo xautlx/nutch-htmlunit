@@ -4,5 +4,153 @@
 <!-- Put site-specific property overrides in this file. -->
 
 <configuration>
+    <property>
+        <name>http.agent.name</name>
+        <value>ns</value>
+    </property>
+
+    <property>
+        <name>http.robots.agents</name>
+        <value>ns,*</value>
+        <description>The agent strings we'll look for in robots.txt files,
+            comma-separated, in decreasing order of
+            precedence. You should
+            put the
+            value of http.agent.name as the first agent name, and keep the
+            default * at the
+            end of the list. E.g.: BlurflDev,Blurfl,*
+        </description>
+    </property>
+
+    <property>
+        <name>http.redirect.max</name>
+        <value>1</value>
+        <description>The maximum number of redirects the fetcher will follow when
+            trying to fetch a page. If set to
+            negative or 0, fetcher won't immediately
+            follow redirected URLs, instead it will record them for later
+            fetching.
+        </description>
+    </property>
+
+    <!-- -->
+    <property>
+        <name>plugin.folders</name>
+        <value>./src/plugin</value>
+    </property>
+
+    <property>
+        <name>plugin.includes</name>
+        <value>protocol-htmlunit|urlfilter-(prefix|regex)|parse-(html|s2jh)</value>
+        <description>
+            default:
+            protocol-http|urlfilter-regex|parse-(html|tika)|index-(basic|anchor)|indexer-solr|scoring-opic|urlnormalizer-(pass|regex|basic)
+            Regular expression naming plugin directory names to
+            include. Any plugin not matching this expression is
+            excluded.
+            In any
+            case you need at least include the nutch-extensionpoints plugin.
+            By
+            default Nutch includes
+            crawling just HTML and plain text via HTTP,
+            and basic indexing and search plugins. In order to use HTTPS
+            please
+            enable
+            protocol-httpclient, but be aware of possible intermittent
+            problems with the
+            underlying
+            commons-httpclient library.
+        </description>
+    </property>
+
+    <property>
+        <name>parser.html.outlinks.ignore_tags</name>
+        <value>img,script,link</value>
+        <description>Comma separated list of HTML tags, from which outlinks
+            shouldn't be extracted. Nutch takes links
+            from: a, area, form, frame,
+            iframe, script, link, img. If you add any of those tags here, it
+            won't be taken.
+            Default is empty list. Probably reasonable value
+            for most people would be "img,script,link".
+        </description>
+    </property>
+
+    <property>
+        <name>http.redirect.max</name>
+        <value>10</value>
+        <description>The maximum number of redirects the fetcher will follow when
+            trying to fetch a page. If set to
+            negative or 0, fetcher won't immediately
+            follow redirected URLs, instead it will record them for later
+            fetching.
+        </description>
+    </property>
+
+    <property>
+        <name>db.max.outlinks.per.page</name>
+        <value>-1</value>
+        <description>The maximum number of outlinks that we'll process for a page.
+            If this value is nonnegative (>=0), at
+            most db.max.outlinks.per.page outlinks
+            will be processed for a page; otherwise, all outlinks will be
+            processed.
+        </description>
+    </property>
+
+    <property>
+        <name>db.max.anchor.length</name>
+        <value>1000</value>
+        <description>The maximum number of characters permitted in an anchor.
+        </description>
+    </property>
+
+    <property>
+        <name>db.ignore.internal.links</name>
+        <value>false</value>
+        <description>If true, when adding new links to a page, links from
+            the same host are ignored. This is an effective
+            way to limit the
+            size of the link database, keeping only the highest quality
+            links.
+        </description>
+    </property>
+
+    <property>
+        <name>db.ignore.external.links</name>
+        <value>false</value>
+        <description>If true, outlinks leading from a page to external hosts
+            will be ignored. This is an effective way to
+            limit the crawl to include
+            only initially injected hosts, without creating complex URLFilters.
+        </description>
+    </property>
+
+    <property>
+        <name>parser.html.impl</name>
+        <value>neko</value>
+        <description>HTML Parser implementation. Currently the following
+            keywords
+            are recognized: "neko" uses NekoHTML,
+            "tagsoup" uses TagSoup.
+        </description>
+    </property>
+
+    <property>
+        <name>indexer.max.content.length</name>
+        <value>0</value>
+        <description>The maximum number of characters of a content that are indexed.
+            Content beyond the limit is
+            truncated. A value of -1 disables this check.
+        </description>
+    </property>
+
+    <property>
+        <name>fetcher.server.delay</name>
+        <value>2.0</value>
+        <description>The number of seconds the fetcher will delay between
+            successive requests to the same server.
+        </description>
+    </property>
 
 </configuration>

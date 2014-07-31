@@ -4,7 +4,6 @@
 	<classpathentry kind="src" path="src/plugin/parse-html/src/test"/>
 	<classpathentry kind="src" path="src/plugin/index-s2jh/src/test"/>
 	<classpathentry kind="src" path="src/plugin/index-s2jh/src/java"/>
-	<classpathentry kind="src" path="src/plugin/protocol-selenium/src/java"/>
 	<classpathentry kind="src" path="src/plugin/protocol-htmlunit/src/java"/>
 	<classpathentry kind="src" path="src/plugin/lib-htmlunit/src/java"/>
 	<classpathentry kind="src" path="src/plugin/indexer-solr/src/java"/>
@@ -77,12 +76,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="lib/automaton-1.11-8.jar"/>
-	<classpathentry kind="lib" path="lib/com-sun-syndication-feed-1.0-201002241208.jar"/>
-	<classpathentry kind="lib" path="lib/log4jdbc-remix-0.2.7.jar"/>
-	<classpathentry kind="lib" path="lib/log4jdbc4-1.2.jar"/>
-	<classpathentry kind="lib" path="lib/nekohtml-1.9.18.jar"/>
-	<classpathentry kind="lib" path="lib/sqljdbc-4.0.2206.100.jar"/>
 	<classpathentry kind="lib" path="lib/tagsoup-1.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/automaton-1.11-8.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

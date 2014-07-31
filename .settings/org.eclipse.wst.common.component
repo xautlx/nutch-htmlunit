@@ -56,7 +56,6 @@
         <wb-resource deploy-path="/" source-path="/src/plugin/indexer-solr/src/java"/>
         <wb-resource deploy-path="/" source-path="/src/plugin/protocol-htmlunit/src/java"/>
         <wb-resource deploy-path="/" source-path="/src/plugin/lib-htmlunit/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/protocol-selenium/src/java"/>
         <wb-resource deploy-path="/" source-path="/src/plugin/index-s2jh/src/test"/>
         <wb-resource deploy-path="/" source-path="/src/plugin/index-s2jh/src/java"/>
     </wb-module>
