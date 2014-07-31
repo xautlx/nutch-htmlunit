@@ -15,6 +15,8 @@ import org.apache.nutch.protocol.Content;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.DocumentFragment;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 import com.gargoylesoftware.htmlunit.html.HtmlDivision;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
@@ -60,6 +62,13 @@ public class S2jhHtmlParseFilter extends AbstractHtmlParseFilter {
         parseMeta.add("price", price);
 
         LOG.info(" - SKU：{}, Parse Meta: {}", sku, parseMeta);
+
+        NodeList nodes = selectNodeList(doc,
+                "//DIV[@id='description']/DIV[@class='content ke-post']//IMG[@data-ks-lazyload]");
+        for (int i = 0; i < nodes.getLength(); i++) {
+            Node node = nodes.item(i);
+            String imgUrl = node.getAttributes().getNamedItem("data-ks-lazyload").getTextContent();
+        }
 
         saveCrawlData(url, crawlDatas);
 
