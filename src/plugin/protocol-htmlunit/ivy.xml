@@ -32,7 +32,7 @@
 
   <publications>
     <!--get the artifact from our module name-->
-    <artifact conf="master"/>
+    <artifact conf="default"/>
   </publications>
 
   <dependencies>

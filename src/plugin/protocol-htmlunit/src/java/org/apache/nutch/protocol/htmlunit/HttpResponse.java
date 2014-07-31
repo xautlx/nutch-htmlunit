@@ -12,7 +12,8 @@ import java.net.URL;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.hadoop.conf.Configuration;
-import org.apache.nutch.crawl.CrawlDatum;
+// import org.apache.nutch.crawl.CrawlDatum;
+import org.apache.nutch.storage.WebPage;
 import org.apache.nutch.metadata.Metadata;
 import org.apache.nutch.metadata.SpellCheckedMetadata;
 import org.apache.nutch.net.protocols.HttpDateFormat;
@@ -31,7 +32,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 /** An HTTP response. */
 public class HttpResponse implements Response {
 
-    private HttpBase http;
+    private Http http;
     private URL url;
     private String orig;
     private String base;
@@ -41,8 +42,8 @@ public class HttpResponse implements Response {
     
     /** The nutch configuration */
     private Configuration conf = null;
-
-    public HttpResponse(HttpBase http, URL url, CrawlDatum datum,Configuration conf) throws ProtocolException, IOException {
+    
+    public HttpResponse(Http http, URL url, WebPage page, Configuration conf) throws ProtocolException, IOException {
 
         this.conf = conf;
         this.http = http;
@@ -123,8 +124,8 @@ public class HttpResponse implements Response {
             reqStr.append(this.http.getAccept());
             reqStr.append("\r\n");
 
-            if (datum.getModifiedTime() > 0) {
-                reqStr.append("If-Modified-Since: " + HttpDateFormat.toString(datum.getModifiedTime()));
+            if (page.getModifiedTime() > 0) {
+                reqStr.append("If-Modified-Since: " + HttpDateFormat.toString(page.getModifiedTime()));
                 reqStr.append("\r\n");
             }
             reqStr.append("\r\n");

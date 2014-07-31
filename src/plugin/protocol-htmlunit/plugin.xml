@@ -29,10 +29,11 @@
 
    <requires>
       <import plugin="nutch-extensionpoints"/>
+      <import plugin="lib-http"/>
       <import plugin="lib-htmlunit"/>
    </requires>
 
-   <extension id="org.apache.nutch.protocol.http"
+   <extension id="org.apache.nutch.protocol.htmlunit"
               name="HttpProtocol"
               point="org.apache.nutch.protocol.Protocol">
 
