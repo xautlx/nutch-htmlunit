@@ -65,9 +65,11 @@ public class S2jhHtmlParseFilter extends AbstractHtmlParseFilter {
 
         NodeList nodes = selectNodeList(doc,
                 "//DIV[@id='description']/DIV[@class='content ke-post']//IMG[@data-ks-lazyload]");
+        LOG.info("Product description content image list: ");
         for (int i = 0; i < nodes.getLength(); i++) {
             Node node = nodes.item(i);
             String imgUrl = node.getAttributes().getNamedItem("data-ks-lazyload").getTextContent();
+            LOG.info(" - {}", imgUrl);
         }
 
         saveCrawlData(url, crawlDatas);
@@ -84,6 +86,9 @@ public class S2jhHtmlParseFilter extends AbstractHtmlParseFilter {
     protected boolean isParseDataFetchLoaded(HtmlPage page) {
         HtmlDivision div = page.getFirstByXPath("//DIV[@id='description']/DIV[@class='content ke-post']");
         if (div != null && div.getChildElementCount() > 0) {
+            if (LOG.isInfoEnabled()) {
+                LOG.info("Product description content HTML: {}", asString(div));
+            }
             return true;
         }
         return false;

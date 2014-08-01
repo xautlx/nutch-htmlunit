@@ -301,7 +301,7 @@ public class HttpResponse implements Response {
         String charsetName = page.getPageEncoding();
         pageAsXml = StringUtils.substringAfter(pageAsXml, "?>").trim();
 
-        System.out.println("URL: " + urlStr + ", CharsetName: " + charsetName + " , Page HTML=\n" + pageAsXml);
+        //System.out.println("URL: " + urlStr + ", CharsetName: " + charsetName + " , Page HTML=\n" + pageAsXml);
         if (Http.LOG.isTraceEnabled()) {
             Http.LOG.trace("URL: " + urlStr + ", CharsetName: " + charsetName + " , Page HTML=\n" + pageAsXml);
         }
