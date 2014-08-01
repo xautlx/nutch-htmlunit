@@ -42,7 +42,6 @@ import org.apache.nutch.parse.HtmlParseFilter;
 import org.apache.nutch.parse.HtmlParseFilters;
 import org.apache.nutch.plugin.PluginRepository;
 import org.apache.nutch.protocol.ProtocolException;
-import org.apache.nutch.protocol.http.Http;
 import org.apache.nutch.protocol.http.api.HttpBase;
 import org.apache.nutch.protocol.http.api.HttpException;
 
@@ -299,6 +298,7 @@ public class HttpResponse implements Response {
 
         pageAsXml = page.asXml();
         String charsetName = page.getPageEncoding();
+        //去掉xml头部字符串
         pageAsXml = StringUtils.substringAfter(pageAsXml, "?>").trim();
 
         //System.out.println("URL: " + urlStr + ", CharsetName: " + charsetName + " , Page HTML=\n" + pageAsXml);

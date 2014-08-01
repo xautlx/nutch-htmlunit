@@ -329,6 +329,9 @@
     <copy todir="${runtime.local}/test">
       <fileset dir="${build.dir}/test"/>
     </copy>
+    <copy todir="${runtime.local}/urls">
+      <fileset dir="urls"/>
+    </copy>  	
   </target>
 
   <!-- ================================================================== -->

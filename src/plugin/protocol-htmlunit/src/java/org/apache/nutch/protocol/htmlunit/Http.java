@@ -29,8 +29,6 @@ import org.apache.nutch.net.protocols.Response;
 import org.apache.nutch.protocol.ProtocolException;
 import org.apache.nutch.protocol.RobotRulesParser;
 import org.apache.nutch.protocol.http.api.HttpBase;
-import org.apache.nutch.util.DeflateUtils;
-import org.apache.nutch.util.GZIPUtils;
 import org.apache.nutch.util.NutchConfiguration;
 // Commons Logging imports
 import org.slf4j.Logger;
