@@ -29,6 +29,8 @@ bin/crawl urls crawl false 1
 
 //urls参数为爬虫入库url文件目录; crawl为爬虫输出目录; false本应为solr索引url参数，此处设置为false不做solr索引处理; 1为爬虫执行回数
 
+运行日志输入示例参考：http://git.oschina.net/xautlx/nutch-htmlunit/wikis/Log
+
 ### 扩展插件说明
 
 * **protocol-htmlunit**: 基于Htmlunit实现的AJAX页面Fetcher插件
