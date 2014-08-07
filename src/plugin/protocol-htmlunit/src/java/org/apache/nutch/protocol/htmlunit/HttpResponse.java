@@ -24,14 +24,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PushbackInputStream;
+import java.lang.reflect.Method;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.URL;
 import java.util.List;
 
-import lab.s2jh.crawl.parse.AbstractHtmlParseFilter;
-
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.reflect.MethodUtils;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.nutch.crawl.CrawlDatum;
 import org.apache.nutch.metadata.Metadata;
@@ -262,14 +262,21 @@ public class HttpResponse implements Response {
                 //调用解析过滤器中定义的Javascript执行加载完成判断
                 //任何一个判断返回false标识暂未加载所需数据，线程继续等待直到最大等待时间
                 if (htmlParseFilters != null) {
-                    for (HtmlParseFilter htmlParseFilter : htmlParseFilters) {
-                        if (htmlParseFilter instanceof AbstractHtmlParseFilter) {
-                            AbstractHtmlParseFilter filter = (AbstractHtmlParseFilter) htmlParseFilter;
-                            if (filter.isParseDataFetchLoaded(urlStr, page) == false) {
-                                ok = false;
-                                break;
+                    try {
+                        for (HtmlParseFilter htmlParseFilter : htmlParseFilters) {
+                            //基于反射调用，目前发现直接基于类型转换会导致异常
+                            Method isParseDataFetchLoaded = MethodUtils.getAccessibleMethod(htmlParseFilter.getClass(),
+                                    "isParseDataFetchLoaded", String.class, page.getClass());
+                            if (isParseDataFetchLoaded != null) {
+                                Boolean ret = (Boolean) isParseDataFetchLoaded.invoke(htmlParseFilter, urlStr, page);
+                                if (ret == false) {
+                                    ok = false;
+                                    break;
+                                }
                             }
                         }
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
                 }
                 if (ok == true) {

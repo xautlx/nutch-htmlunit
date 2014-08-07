@@ -85,7 +85,6 @@ public class S2jhHtmlParseFilter extends AbstractHtmlParseFilter {
     @Override
     protected boolean isParseDataFetchLoaded(HtmlPage page) {
         HtmlDivision div = page.getFirstByXPath("//DIV[@id='description']/DIV[@class='content ke-post']");
-        System.out.println("--------------------------------------" + div);
         if (div != null && div.getChildElementCount() > 0) {
             if (LOG.isInfoEnabled()) {
                 LOG.info("Product description content HTML: {}", asString(div));

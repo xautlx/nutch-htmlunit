@@ -22,17 +22,6 @@
         </description>
     </property>
 
-    <property>
-        <name>http.redirect.max</name>
-        <value>1</value>
-        <description>The maximum number of redirects the fetcher will follow when
-            trying to fetch a page. If set to
-            negative or 0, fetcher won't immediately
-            follow redirected URLs, instead it will record them for later
-            fetching.
-        </description>
-    </property>
-
     <!-- -->
     <property>
         <name>plugin.folders</name>
@@ -133,15 +122,6 @@
             keywords
             are recognized: "neko" uses NekoHTML,
             "tagsoup" uses TagSoup.
-        </description>
-    </property>
-
-    <property>
-        <name>indexer.max.content.length</name>
-        <value>0</value>
-        <description>The maximum number of characters of a content that are indexed.
-            Content beyond the limit is
-            truncated. A value of -1 disables this check.
         </description>
     </property>
 
