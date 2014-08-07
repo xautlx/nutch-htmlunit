@@ -5,6 +5,10 @@ Nutch Htmlunit Plugin
 
 基于Apache Nutch 1.8和Htmlunit组件，实现对于AJAX加载类型页面的完整页面内容抓取解析。
 
+According to the implementation of Apache Nutch 1.8, we can't get dynamic HTML information from fetch pages including AJAX requests as it will ignore all AJAX requests.
+
+This plugin will use Htmlunit to fetch whole page content with necessary dynamic AJAX requests. It developed and tested with Apache Nutch 1.8, you can try it on other Nutch version or refactor the source codes as your design.
+
 ### 主要特性
 
 * **常规的HTML页面抓取**: 对于常规的例如新闻类没有AJAX特性的页面可以直接用Nutch自带的protocol-http插件抓取。
