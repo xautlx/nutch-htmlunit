@@ -247,7 +247,7 @@ public class HttpResponse implements Response {
      * ------------------------- */
 
     //最大Javascript执行等待时间
-    private static final int MAX_AJAX_WAIT_SECONDS = 30;
+    private static final int MAX_AJAX_WAIT_SECONDS = 60;
 
     private void readPlainContent(URL url) throws IOException {
         Http.LOG.trace("Htmlunit fetching: " + url);

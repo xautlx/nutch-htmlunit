@@ -1,36 +1,40 @@
-Apache Nutch README
+Nutch Htmlunit Plugin
+==============
 
-For the latest information about Nutch, please visit our website at:
+### 项目简介
 
-   http://nutch.apache.org
+基于Apache Nutch 1.8和Htmlunit组件，实现对于AJAX加载类型页面的完整页面内容抓取解析。
 
-and our wiki, at:
+### 主要特性
 
-   http://wiki.apache.org/nutch/
+* **常规的HTML页面**: 对于常规的例如新闻类没有AJAX特性的页面可以直接用Nutch自带的protocol-http插件抓取
 
-To get started using Nutch read Tutorial:
+* **常规的AJAX页面**: 对于绝大部分诸如jQuery ajax加载的页面，可以直接用protocol-htmlunit插件抓取
 
-   http://wiki.apache.org/nutch/NutchTutorial
-   
-Export Control
 
-This distribution includes cryptographic software.  The country in which you 
-currently reside may have restrictions on the import, possession, use, and/or 
-re-export to another country, of encryption software.  BEFORE using any encryption 
-software, please check your country's laws, regulations and policies concerning the
-import, possession, or use, and re-export of encryption software, to see if this is 
-permitted.  See <http://www.wassenaar.org/> for more information. 
 
-The U.S. Government Department of Commerce, Bureau of Industry and Security (BIS), has 
-classified this software as Export Commodity Control Number (ECCN) 5D002.C.1, which 
-includes information security software using or performing cryptographic functions with 
-asymmetric algorithms.  The form and manner of this Apache Software Foundation 
-distribution makes it eligible for export under the License Exception ENC Technology 
-Software Unrestricted (TSU) exception (see the BIS Export Administration Regulations, 
-Section 740.13) for both object code and source code.
+```
 
-The following provides more details on the included cryptographic software:
+<property>
+  <name>plugin.includes</name>
+  <value>protocol-htmlunit|urlfilter-regex|parse-...</value>
+  <description>Regular expression naming plugin directory names to
+  include.  Any plugin not matching this expression is excluded.
+  In any case you need at least include the nutch-extensionpoints plugin. By
+  default Nutch includes crawling just HTML and plain text via HTTP,
+  and basic indexing and search plugins. In order to use HTTPS please enable 
+  protocol-httpclient, but be aware of possible intermittent problems with the 
+  underlying commons-httpclient library.
+  </description>
+</property>
 
-Apache Nutch uses the PDFBox API in its parse-tika plugin for extracting textual content 
-and metadata from encrypted PDF files. See http://pdfbox.apache.org for more 
-details on PDFBox.
+```
+
+* Optionally, you can config apache-nutch-2.1/conf/regex-urlfilter.txt to control htmlunit only fetch specified urls including internal AJAX request. 
+See detail: https://github.com/xautlx/nutch-htmlunit/blob/master/src/plugin/lib-htmlunit/src/java/org/apache/nutch/protocol/htmlunit/RegexHttpWebConnection.java
+
+* That's all. Now you can execute: apache-nutch-2.1/bin/nutch crawl urls, and see page contents parsed by htmlunit.
+
+### Contact Author
+
+* E-Mail: xautlx@hotmail.com
