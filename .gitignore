@@ -2,7 +2,6 @@
 /crawl-*
 /build
 /logs
-/runtime
 /target
 /hadoop.log
 /hadoop.log*
