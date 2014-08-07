@@ -24,7 +24,10 @@ Nutch Htmlunit Plugin
 git clone整个工程代码后，进行本地git下载目录：
 
 cd nutch-htmlunit/runtime/local
-bin/crawl urls crawl false 1  //urls参数为爬虫入库url文件目录; crawl为爬虫输出目录; false本应为solr索引url参数，此处设置为false不做solr索引处理; 1为爬虫执行回数
+
+bin/crawl urls crawl false 1  
+
+//urls参数为爬虫入库url文件目录; crawl为爬虫输出目录; false本应为solr索引url参数，此处设置为false不做solr索引处理; 1为爬虫执行回数
 
 ### 扩展插件说明
 
