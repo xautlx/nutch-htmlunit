@@ -264,7 +264,11 @@ public class HttpResponse implements Response {
                 if (htmlParseFilters != null) {
                     try {
                         for (HtmlParseFilter htmlParseFilter : htmlParseFilters) {
-                            //基于反射调用，目前发现直接基于类型转换会导致异常
+                            /**
+                             * 基于反射调用，目前发现直接基于类型转换会导致异常
+                             * @see  AbstractHtmlParseFilter#isParseDataFetchLoaded
+                             * 参考@see S2jhHtmlParseFilter#isParseDataFetchLoaded
+                             */
                             Method isParseDataFetchLoaded = MethodUtils.getAccessibleMethod(htmlParseFilter.getClass(),
                                     "isParseDataFetchLoaded", String.class, page.getClass());
                             if (isParseDataFetchLoaded != null) {

@@ -14,31 +14,27 @@ Nutch Htmlunit Plugin
 * **特殊的AJAX请求页面抓取**: 诸如淘宝/天猫的页面采用了独特的Kissy Javascript组件，
 导致htmlunit无法直接感知到需要等待Kissy发起的请求完成;通过等待页面加载解析内容判断处理实现此类页面数据抓取。
 
-* **基于页面滚动加载的AJAX请求页面抓取**: 诸如淘宝/天猫的商品详情页面会基于页面滚动发起商品描述信息的加载，
+* **基于页面滚动的AJAX请求页面抓取**: 诸如淘宝/天猫的商品详情页面会基于页面滚动发起商品描述信息的加载，
 通过protocol-htmlunit可以实现此类页面数据抓取。
 
-```
+### 运行体验
 
-<property>
-  <name>plugin.includes</name>
-  <value>protocol-htmlunit|urlfilter-regex|parse-...</value>
-  <description>Regular expression naming plugin directory names to
-  include.  Any plugin not matching this expression is excluded.
-  In any case you need at least include the nutch-extensionpoints plugin. By
-  default Nutch includes crawling just HTML and plain text via HTTP,
-  and basic indexing and search plugins. In order to use HTTPS please enable 
-  protocol-httpclient, but be aware of possible intermittent problems with the 
-  underlying commons-httpclient library.
-  </description>
-</property>
+由于Nutch运行是基于Unix/Linux环境的，请自行准备Unix/Linux系统或Cygwin运行环境。
 
-```
+git clone整个工程代码后，进行本地git下载目录：
 
-* Optionally, you can config apache-nutch-2.1/conf/regex-urlfilter.txt to control htmlunit only fetch specified urls including internal AJAX request. 
-See detail: https://github.com/xautlx/nutch-htmlunit/blob/master/src/plugin/lib-htmlunit/src/java/org/apache/nutch/protocol/htmlunit/RegexHttpWebConnection.java
+cd nutch-htmlunit/runtime/local
+bin/crawl urls crawl false 1  //urls参数为爬虫入库url文件目录; crawl为爬虫输出目录; false本应为solr索引url参数，此处设置为false不做solr索引处理; 1为爬虫执行回数
 
-* That's all. Now you can execute: apache-nutch-2.1/bin/nutch crawl urls, and see page contents parsed by htmlunit.
+### 扩展插件说明
 
-### Contact Author
+* **protocol-htmlunit**: 基于Htmlunit实现的AJAX页面Fetcher插件
 
-* E-Mail: xautlx@hotmail.com
+* **parse-s2jh**: 基于XPath解析页面元素内容; 基于数据库模式输出解析到结构化数据; 对于个别复杂类型AJAX页面定制判断页面加载完成的回调判断逻辑
+
+* **index-s2jh**: 追加设置需要额外传递给solr索引的属性数据; 设定不需要索引的页面规则;
+
+### 源码工程说明
+
+整个工程基于Apache Nutch 1.8源码工程扩展插件实现，插件的定义和配置与官方插件处理模式一致，具体可参考Apache Nutch 1.8官方文档资料。
+具体实现原理和代码，请自行导入Eclipse工程查看即可。
