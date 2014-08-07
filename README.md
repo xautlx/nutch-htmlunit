@@ -7,12 +7,15 @@ Nutch Htmlunit Plugin
 
 ### 主要特性
 
-* **常规的HTML页面抓取**: 对于常规的例如新闻类没有AJAX特性的页面可以直接用Nutch自带的protocol-http插件抓取
+* **常规的HTML页面抓取**: 对于常规的例如新闻类没有AJAX特性的页面可以直接用Nutch自带的protocol-http插件抓取。
 
-* **常规的AJAX页面抓取**: 对于绝大部分诸如jQuery ajax加载的页面，可以直接用protocol-htmlunit插件抓取
+* **常规的AJAX页面抓取**: 对于绝大部分诸如jQuery ajax加载的页面，可以直接用protocol-htmlunit插件抓取。
 
 * **特殊的AJAX请求页面抓取**: 诸如淘宝/天猫的页面采用了独特的Kissy Javascript组件，
-导致htmlunit无法直接感知到需要等待Kissy发起的请求完成;
+导致htmlunit无法直接感知到需要等待Kissy发起的请求完成;通过等待页面加载解析内容判断处理实现此类页面数据抓取。
+
+* **基于页面滚动加载的AJAX请求页面抓取**: 诸如淘宝/天猫的商品详情页面会基于页面滚动发起商品描述信息的加载，
+通过protocol-htmlunit可以实现此类页面数据抓取。
 
 ```
 
