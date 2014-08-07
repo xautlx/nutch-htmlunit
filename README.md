@@ -58,4 +58,4 @@ bin/crawl urls crawl false 1
 
 * 收费协议
 
-如果你希望提供定制的扩展实现/技术咨询服务/毕业设计指导/二次开发项目指导等任何有兴趣的合作形式，可以联系 xautlx@hotmail.com 协商收费服务。
+如果你希望提供基于Apache Nutch/Solr/Lucene等系列技术的定制的扩展实现/技术咨询服务/毕业设计指导/二次开发项目指导等任何有兴趣的合作形式，可以联系 xautlx@hotmail.com 协商收费服务。
