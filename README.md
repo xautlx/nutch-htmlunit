@@ -59,3 +59,10 @@ bin/crawl urls crawl false 1
 * 收费服务
 
 如果你希望提供基于Apache Nutch/Solr/Lucene等系列技术的定制的扩展实现/技术咨询服务/毕业设计指导/二次开发项目指导等任何有兴趣的合作形式，可以联系 E-Mail: xautlx@hotmail.com 或 QQ: 2414521719 (加Q请注明：nutch/solr/lucene) 协商收费服务。[上述联系方式恕不直接提供免费的技术咨询类询问，若对项目有任何技术问题或Issue反馈，请直接提交到项目站点提问或Git平台的Issue]
+
+### Reference
+
+欢迎关注作者其他项目：
+
+* [S2JH](https://github.com/xautlx/s2jh) -  基于SSH的企业Web应用开发框架
+* [12306 Hunter](https://github.com/xautlx/12306-hunter) - （功能已失效不可用，不过还可以当作Swing开发样列参考只用）Java Swing C/S版本12306订票助手，用处你懂的
