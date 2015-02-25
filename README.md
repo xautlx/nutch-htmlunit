@@ -1,3 +1,9 @@
+### -----------------------------------------------------------------------------
+### Current release stop update, for Apache Nutch 2.X implement please refer to:
+### https://github.com/xautlx/nutch-ajax
+### -----------------------------------------------------------------------------
+
+
 Nutch Htmlunit Plugin
 ==============
 
