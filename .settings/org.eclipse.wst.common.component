@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="apache-nutch-1.7">
-        <wb-resource deploy-path="/" source-path="/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/lib-htmlunit/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/protocol-htmlunit/src/java"/>
-    </wb-module>
-</project-modules>
