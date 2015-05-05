@@ -38,6 +38,8 @@ public class HttpWebClient {
                     webClient.getOptions().setCssEnabled(false);
                     webClient.getOptions().setAppletEnabled(false);
                     webClient.getOptions().setThrowExceptionOnScriptError(false);
+                    // SSL support
+					webClient.getOptions().setUseInsecureSSL(true);
                     // AJAX support
                     webClient.setAjaxController(new NicelyResynchronizingAjaxController());
                     // Use extension version htmlunit cache process

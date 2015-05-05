@@ -44,5 +44,15 @@
       </implementation>
 
    </extension>
+   
+   <extension id="org.apache.nutch.protocol.https"
+              name="HttpsProtocol"
+              point="org.apache.nutch.protocol.Protocol">
+
+      <implementation id="org.apache.nutch.protocol.htmlunit.Http"
+                      class="org.apache.nutch.protocol.htmlunit.Http">
+        <parameter name="protocolName" value="https"/>
+      </implementation>
+       </extension>
 
 </plugin>

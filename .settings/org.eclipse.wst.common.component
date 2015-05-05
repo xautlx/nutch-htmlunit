@@ -1,62 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
     <wb-module deploy-name="apache-nutch-1.7">
-        <wb-resource deploy-path="/" source-path="/src/plugin/parse-html/src/test"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/index-basic/src/test"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/urlnormalizer-basic/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/urlfilter-prefix/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/urlnormalizer-pass/src/test"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/protocol-httpclient/src/test"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/urlnormalizer-basic/src/test"/>
         <wb-resource deploy-path="/" source-path="/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/urlfilter-automaton/src/test"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/urlfilter-suffix/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/subcollection/src/test"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/language-identifier/src/test"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/creativecommons/src/test"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/protocol-ftp/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/index-basic/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/index-more/src/test"/>
-        <wb-resource deploy-path="/" source-path="/src/bin"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/index-more/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/urlfilter-domain/src/test"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/subcollection/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/urlnormalizer-pass/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/index-anchor/src/test"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/protocol-file/src/test"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/urlfilter-validator/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/index-anchor/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/parse-tika/src/test"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/microformats-reltag/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/protocol-http/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/urlnormalizer-regex/src/test"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/lib-http/src/test"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/protocol-httpclient/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/language-identifier/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/parse-html/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/urlfilter-automaton/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/urlfilter-suffix/src/test"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/urlfilter-regex/src/test"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/scoring-opic/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/parse-tika/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/scoring-link/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/urlfilter-regex/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/urlnormalizer-regex/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/lib-regex-filter/src/test"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/lib-regex-filter/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/urlfilter-domain/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/tld/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/parse-js/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/protocol-file/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/lib-http/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/creativecommons/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/parse-s2jh/src/test"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/parse-s2jh/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/test"/>
-        <wb-resource deploy-path="/" source-path="/src/testresources"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/indexer-solr/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/protocol-htmlunit/src/java"/>
         <wb-resource deploy-path="/" source-path="/src/plugin/lib-htmlunit/src/java"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/index-s2jh/src/test"/>
-        <wb-resource deploy-path="/" source-path="/src/plugin/index-s2jh/src/java"/>
+        <wb-resource deploy-path="/" source-path="/src/plugin/protocol-htmlunit/src/java"/>
     </wb-module>
 </project-modules>
